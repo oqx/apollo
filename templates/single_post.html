@@ -1,0 +1,12 @@
+{% extends 'base/layout.html' %}
+
+{% block head_title %}{{post.title}} |{% endblock %}
+{% block content %}
+  {% if post %}
+
+    {{ post.text }}
+
+  {% else %}
+    <p>No info</p>
+  {% endif %}
+{% endblock %}

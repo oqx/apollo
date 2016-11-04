@@ -1,0 +1,27 @@
+{% load render_bundle from webpack_loader %} {% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block head_title %}{% endblock %} Apollo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="{% static 'turbolinks/turbolinks.js' %}"></script>
+</head>
+
+<body>
+  {% block navbar %}{% include 'base/navbar.html' %}{% endblock %}
+
+  <article id="body">
+    {% block content %} {% endblock %}
+  </article>
+
+  <script>
+    Turbolinks.ProgressBar.disable();
+  </script>
+  {% render_bundle 'main' %}
+</body>
+
+</html>
