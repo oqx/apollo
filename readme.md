@@ -8,7 +8,13 @@
 
 ## Front End
 
-Webpack is installed in `/static`. `cd` into `/static`, to view and edit files. To bundle, type `npm run bundle`. Assets will be placed into a `/dist` directory, and in the root Django directory, run `python manage.py collectstatic`. That'll place all assets in an `/assets` directory in root.
+Webpack & NPM are installed in `/static`. 
+
+1. `cd` into `/static` to view and edit files Type `npm install` to install packages.
+
+2. Bundle by typing `npm run bundle`. Assets will be placed into a `/dist` directory.
+
+3. In the root project directory, run `python manage.py collectstatic`. That'll place all assets in an `/assets` directory in root.
 
 ## TODO
 
